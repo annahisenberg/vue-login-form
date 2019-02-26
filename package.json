@@ -11,8 +11,10 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.13",
+    "jwt-decode": "^2.2.0",
     "vue": "^2.6.7",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuejs-jwt": "^1.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

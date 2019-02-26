@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 
 import BootstrapVue from 'bootstrap-vue'
+import VueJWT from 'vuejs-jwt'
+ 
+Vue.use(VueJWT)
 
 Vue.use(BootstrapVue)
 

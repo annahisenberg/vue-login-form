@@ -14,20 +14,22 @@
       </b-form-group>
       <hr>
 
-        <b-button type="submit" variant="primary">Login</b-button>
-
+      <b-button type="submit" variant="primary">Login</b-button>
     </b-form>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import jwt_decode from 'jwt-decode';
 
 export default {
   data() {
     return {
       username: "",
       password: "",
+      token: '',
+      decoded: ''
     };
   },
   methods: {
@@ -37,7 +39,10 @@ export default {
       axios.post('https://employeeauth_dev.msionline.com:9090/api/login', {
         username, password
       })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(jwt_decode(res.data.token));
+        this.$router.push('/')
+      })
       .catch(err => console.log(err))
     }
   }
